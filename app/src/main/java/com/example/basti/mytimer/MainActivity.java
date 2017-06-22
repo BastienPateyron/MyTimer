@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         /* Son */
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
-        son = soundPool.load(MainActivity.this,R.raw.robot_blip,1);
+        son = soundPool.load(MainActivity.this,R.raw.reponse_ordi,1);
 
 
         /* Chrono */
@@ -70,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 int freq = Integer.valueOf(frequence.getText().toString());
                 int time = (int) (elapsedRealtime() - chrono.getBase()) / 1000; // Conversion du temps écoulé en secondes
                 if ((time % freq) == 0) {
-                    soundPool.play(son, 1, 1, 0, 1, 2);
-                    Toast.makeText(MainActivity.this, "Chrono:" + time, Toast.LENGTH_SHORT).show();
+                    soundPool.play(son, 1, 1, 0, 0, 1);
                 }
             }
         }
