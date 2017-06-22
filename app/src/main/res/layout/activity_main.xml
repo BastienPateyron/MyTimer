@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.basti.mytimer.MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/texte"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Frequence du bip ?"
+        android:padding="20dip"
+        android:textSize="35dip"
+        android:background="#6c6a6a"
+        android:textColor="#f1f0ee"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_below="@id/texte"
+        android:id="@+id/frequence"
+        android:padding="30dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saissez votre fréquence (s)"
+        android:inputType="number"/>
+
+
+
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:gravity="center"
+        android:layout_below="@id/frequence"
+        android:layout_above="@+id/bouton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/timer"
+        android:padding="50dip"
+        android:textSize="100sp"
+        android:textColor="#ff0000"
+        android:background="#16ec0b"/>
+
+    <Button
+        android:id="@+id/bouton"
+        android:layout_alignParentBottom="true"
+        android:padding="40dip"
+        android:textSize="40sp"
+        android:text="Démarrer !"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
